@@ -6,7 +6,7 @@ services:
   - type: web
     name: remix
     env: node
-    plan: free
+    plan: starter
     buildCommand: npm ci --production=false && npm run build && npm prune --production
     startCommand: npx prisma migrate deploy && npm run start
     healthCheckPath: /healthcheck
